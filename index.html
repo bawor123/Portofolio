@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Ishaq Imam Subekti | Personal Portfolio</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+  <!-- (Optional) Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Ishaq Imam Subekti</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <h1>Ishaq Imam Subekti</h1>
+        <p>Mahasiswa | Web Developer Enthusiast</p>
+        <p>Saya adalah mahasiswa yang antusias di bidang teknologi dan pengembangan web, siap mengeksplorasi berbagai peluang dan tantangan baru.</p>
+        <a href="#contact" class="btn accent-btn">Contact Me</a>
+      </div>
+      <div class="hero-img fade-in">
+        <!-- Placeholder Image, ganti dengan foto pribadi bila ada -->
+        <img src="https://i.ibb.co/5n3qVSZ/profile-placeholder.png" alt="Foto Profil"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about section" id="about">
+    <div class="container about-content fade-in">
+      <h2>About Me</h2>
+      <p>
+        Saya, Ishaq Imam Subekti, adalah mahasiswa yang memiliki ketertarikan kuat terhadap pengembangan web modern, UI/UX, serta teknologi terbaru. Saya selalu bersemangat untuk belajar hal-hal baru dan mengembangkan kemampuan saya, baik secara individu maupun tim.
+      </p>
+      <div class="about-skills">
+        <h3>Keahlian Utama:</h3>
+        <ul>
+          <li>Web Development (HTML, CSS, JavaScript)</li>
+          <li>UI/UX Design</li>
+          <li>Problem Solving</li>
+          <li>Teamwork dan Leadership</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section class="skills section" id="skills">
+    <div class="container fade-in">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fa-brands fa-html5 skill-icon"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt skill-icon"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-brands fa-js skill-icon"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code skill-icon"></i>
+          <span>UI/UX</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-users skill-icon"></i>
+          <span>Teamwork</span>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-lightbulb skill-icon"></i>
+          <span>Problem Solving</span>
+        </div>
+        <!-- Tambah skill sesuai kebutuhan -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container fade-in">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <!-- Project Card 1 -->
+        <div class="portfolio-card">
+          <img src="https://i.ibb.co/z4rDmPt/project-sample-1.jpg" alt="Project 1"/>
+          <h3>Personal Website</h3>
+          <p>Website portofolio pribadi dengan desain modern dan responsif menggunakan HTML, CSS, dan JavaScript.</p>
+          <a href="#" target="_blank" class="btn btn-detail">Lihat Detail</a>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="portfolio-card">
+          <img src="https://i.ibb.co/1KjNcJD/project-sample-2.jpg" alt="Project 2"/>
+          <h3>Landing Page UI</h3>
+          <p>Landing page produk dengan fokus pada pengalaman pengguna dan interaksi animasi halus.</p>
+          <a href="#" target="_blank" class="btn btn-detail">Lihat Detail</a>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="portfolio-card">
+          <img src="https://i.ibb.co/jh1BJzC/project-sample-3.jpg" alt="Project 3"/>
+          <h3>Mini Project App</h3>
+          <p>Aplikasi mini untuk mengelola tugas harian, dibuat dengan JavaScript murni.</p>
+          <a href="#" target="_blank" class="btn btn-detail">Lihat Detail</a>
+        </div>
+        <!-- Tambah project sebanyak yang diinginkan -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container fade-in">
+      <h2>Contact Me</h2>
+      <form class="contact-form" id="contactForm" autocomplete="off">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Nama" required>
+          <small class="error-msg" id="error-name"></small>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <small class="error-msg" id="error-email"></small>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" rows="5" placeholder="Pesan" required></textarea>
+          <small class="error-msg" id="error-message"></small>
+        </div>
+        <button type="submit" class="btn accent-btn">Kirim Pesan</button>
+        <div id="formSuccess" class="form-success"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 Ishaq Imam Subekti. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
