@@ -44,6 +44,39 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', checkAndFill);
 });
 
+/* ================================
+   ANIMASI ANGKA PERSENTASE
+================================ */
+const percentTexts = document.querySelectorAll('.skill-percent');
+
+function animatePercent(el, target) {
+  let current = 0;
+  const speed = 20; // kecepatan angka
+
+  const timer = setInterval(() => {
+    if (current <= target) {
+      el.textContent = current + "%";
+      current++;
+    } else {
+      clearInterval(timer);
+    }
+  }, speed);
+}
+
+function runPercentAnimation() {
+  fills.forEach((bar, index) => {
+    if (bar.dataset.filled && !bar.dataset.percentAnimated) {
+      let target = parseInt(bar.getAttribute("data-progress"));
+      animatePercent(percentTexts[index], target);
+      bar.dataset.percentAnimated = "1";
+    }
+  });
+}
+
+window.addEventListener("scroll", runPercentAnimation);
+window.addEventListener("DOMContentLoaded", runPercentAnimation);
+
+
 
 // Close mobile nav when link is clicked
 document.querySelectorAll('.nav-links li a').forEach(link => {
