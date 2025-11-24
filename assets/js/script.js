@@ -6,6 +6,45 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
+// assets/js/script.js
+document.addEventListener('DOMContentLoaded', function () {
+  const fills = document.querySelectorAll('.skill-fill');
+
+  // helper: check if element is visible on viewport
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= (window.innerHeight || document.documentElement.clientHeight) - 60;
+  }
+
+  // fill a single element according to data-progress
+  function fillElement(el) {
+    const value = el.getAttribute('data-progress') || '0%';
+    // sanitize value (ensure percentage)
+    const percent = value.toString().trim().replace('%','') + '%';
+    // set width (this will trigger CSS transition)
+    el.style.width = percent;
+  }
+
+  // try fill all that are visible now
+  function checkAndFill() {
+    fills.forEach(el => {
+      if (el.dataset.filled) return; // already filled
+      if (isInViewport(el) || document.readyState === 'complete') {
+        fillElement(el);
+        el.dataset.filled = '1';
+      }
+    });
+  }
+
+  // initial check (in case already visible)
+  checkAndFill();
+
+  // check on scroll and resize
+  window.addEventListener('scroll', checkAndFill);
+  window.addEventListener('resize', checkAndFill);
+});
+
+
 // Close mobile nav when link is clicked
 document.querySelectorAll('.nav-links li a').forEach(link => {
   link.addEventListener('click', () => {
